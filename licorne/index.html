@@ -181,8 +181,6 @@ function show_infobox() {
     <title>Licorne</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="height=device-height, initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
 
@@ -286,6 +284,20 @@ function show_infobox() {
 
     <script src="https://pygame-web.github.io/cdn/0.9.3//browserfs.min.js"></script>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+    <style id="licorne-ecran">
+        html, body { margin: 0 !important; padding: 0 !important; width: 100%; height: 100%;
+                     overflow: hidden !important; background: #2a1840 !important; touch-action: none; overscroll-behavior: none; }
+        canvas#canvas {
+            position: fixed !important; left: 50% !important; top: 50% !important; right: auto !important; bottom: auto !important;
+            margin: 0 !important; transform: translate(-50%, -50%) !important;
+            width: min(100vw, calc(100vh * 16 / 9)) !important; height: min(100vh, calc(100vw * 9 / 16)) !important;
+        }
+        @supports (height: 100dvh) {
+            canvas#canvas { width: min(100vw, calc(100dvh * 16 / 9)) !important; height: min(100dvh, calc(100vw * 9 / 16)) !important; }
+        }
+    </style>
 </head>
 
 <body>
