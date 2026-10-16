@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nos jeux</title>
+<link rel="icon" href="licorne/favicon.png">
+<style>
+  :root { --fond: #c9b6f2; --carte: #ffffff; --texte: #4a2470; --accent: #ff7fc0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: linear-gradient(#8fd0ff, var(--fond)); color: var(--texte);
+         font-family: "Trebuchet MS", "Segoe UI", sans-serif; display: flex; flex-direction: column; align-items: center; padding: 24px 16px; }
+  h1 { font-size: clamp(2rem, 7vw, 3.4rem); margin: 8px 0 24px; color: #fff; text-shadow: 0 3px 0 var(--texte); text-align: center; }
+  .jeux { display: grid; gap: 18px; width: 100%; max-width: 720px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  a.jeu { display: flex; align-items: center; gap: 16px; background: var(--carte); color: var(--texte); text-decoration: none;
+          border-radius: 22px; padding: 16px 20px; border: 5px solid #fff; box-shadow: 0 6px 0 rgba(74, 36, 112, .35); }
+  a.jeu:active { transform: translateY(3px); box-shadow: 0 3px 0 rgba(74, 36, 112, .35); }
+  a.jeu img { width: 64px; height: 70px; }
+  a.jeu b { display: block; font-size: 1.5rem; }
+  a.jeu span { font-size: .95rem; }
+  p.aide { max-width: 720px; text-align: center; font-size: .95rem; margin-top: 28px; }
+</style>
+</head>
+<body>
+  <h1>Nos jeux</h1>
+  <div class="jeux">
+    <a class="jeu" href="licorne/">
+      <img src="licorne/favicon.png" alt="">
+      <div><b>Licorne</b><span>et les muffins à l'herbe</span></div>
+    </a>
+  </div>
+  <p class="aide">Sur téléphone ou tablette : tenez l'écran couché, touchez l'écran pour démarrer,
+  puis touchez encore une fois pour faire apparaître les boutons.<br>
+  Sur ordinateur : les flèches, ESPACE pour sauter, X pour le Boulet de canon, Échap pour la pause.</p>
+</body>
+</html>
